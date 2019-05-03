@@ -1,0 +1,97 @@
+Thu 10 Jan 2019 12:42:24 PM CET - Stradate 96627.31 (STO)
+Author: Nicolas Flandrois
+
+In the following, a few date reference points, we may use:
+
+Dates reference points from movies or TV shows time line:
+
+	Star Trek Discovery (Pilot Episod)
+		May 11th, 2256 (earthdate)
+		Stardate: 1207.30
+
+	Star Trek Deep Space Nine
+		Year 2369 (earthdate)
+		Stardate: 46379.10
+		
+	Star Trek Voyager
+		Year 2371 (earthdate)
+		Stardate: 48315.60
+		
+	Destruction of Vulcan
+		January 2nd, 2263 (earthdate)
+		Stardate 2263.02
+		
+	Star Trek Into Darkness
+		February24th, 2259 (earthdate)
+		Stardate: 2259.55
+		
+	Star Trek Beyond
+		Year 2263 (earthdate)
+		Stardate: 2263.02
+		
+	Enterprise (Star Trek Enterprise)
+		Earth date period of time: 2151 > 2155 (earthdate)
+		(According to  global timeline cross referencing all Star Trek Univers, this should be the oldest timeline. First in chronological order.)
+		
+	Star Trek (2009's movie)
+	(from prologue)
+		Year 2233 (earthdate)
+		Stardate: 2233.04
+		
+Dates reference points related to Events/Entities:
+
+	First Klingon-Human contact
+		April 16th, 2151. (earthdate)
+		
+	Foundation of the United Federation of Planets (UFP)
+		2161 (earthdate)
+		Founding species:
+			Humans
+			Vulcans
+			Andorians
+			Tellarites
+
+Dates reference points related to characters through Star Trek Univers:
+
+	Jonathan Archer
+		Captain Admiral
+		Enterprise commander
+		(tv show: Enterprise)
+		Year of birth (earthdate): 2112
+	
+	Spock
+		Vulcan (half human, half vulcan)
+		Scientist
+		First vaissell officer of the Enterprise Ambassador.
+		(tv show: First TV Show Star Trek, in 1967)
+		Year of birth (earthdate): 2230
+		
+	James Tiberius Kirk
+		Captain of the USS Enterprise,
+		Then a Starfleet Admiral,
+		Then back to become the Captain of the USS Enterprise A
+		First vaissell officer of the Enterprise Ambassador.
+		(tv show: First TV Show Star Trek, in 1967)
+		Birthdate (earthdate): March 22nd, 2233.
+		
+	Jean Luc Picard
+		Captain of the starship USS Enterprise-D, USS Enterprise-E, Stargazer
+		(Portrayed  by Patrik Stewart
+		TV Shows:  Star Trek: The Next Generation (TNG), the feature films Star Trek Generations (1994), Star Trek: First Contact (1996), Star Trek: Insurrection (1998), and Star Trek: Nemesis (2002), and is planned to feature as the central character in an as yet untitled forthcoming Star Trek show currently in development.)
+		Year of birth (earthdate): July 13th, 2305.
+		
+Other Reference Points:
+
+	Star Trek Online (STO) MMORPG
+		Launched in 2009 (Real earth timeline)
+		The story sets in timeline, at launch:
+			Earthdate: Year 2409
+			Stardate: 86088.58
+		Some other reference points to help you calculate in this STO timeline, from their online converter:
+			> Stardate 00000.00 = May 2nd, 1922 @ 14:01 (Real earth timeline)
+			> (Real earth timeline) 2019/01/01 00/00 = Stardate 96601.20
+		Online Stardate Converter: https://www.stoacademy.com/tools/stardate.php
+		
+	(Real earth timeline) 2005 = Stardate 5800.00 (https://www.wikihow.com/Calculate-Stardates)
+	
+	(Real earth timeline) 2323 = Stardate 0000.00 (https://www.wikihow.com/Calculate-Stardates)
