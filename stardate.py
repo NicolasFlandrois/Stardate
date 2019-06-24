@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-#Date: 
+#Date: Mon 24 Jun 2019 17:36:52 CEST
 #Author: Nicolas Flandrois
-#Description:
+#Description: Running Stardate
 
 from sdview import View
 from sdcompute import Compute

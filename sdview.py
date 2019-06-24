@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-#Date: 
+#Date: Mon 24 Jun 2019 17:36:07 CEST
 #Author: Nicolas Flandrois
-#Description:
+#Description:View's class will regroup all displays and questions inputs, needed in Stardate.
 
 import datetime
 import os, platform

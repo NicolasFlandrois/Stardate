@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-#Date: 
+#Date: Mon 24 Jun 2019 17:37:37 CEST
 #Author: Nicolas Flandrois
-#Description:
+#Description: The Compute class regroup all necessary computing functions, needed in stardate.
 
 import datetime
 import json
