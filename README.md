@@ -98,7 +98,7 @@ Today, the following algorythm is admited in Star Trek fan univers, to convert a
 > 
 > d = Earth Day to convert
 
->   ***Nota Benne***: (m+d) = ISO-8601 day of the year's number. e.g. June 10th, 2018 = Year 2018, Day 161
+> ***Nota Benne***: (m+d) = ISO-8601 day of the year's number. e.g. June 10th, 2018 = Year 2018, Day 161
 
 The most important piece of information: **1 Earth Year = 1000 Stardate units**.
 

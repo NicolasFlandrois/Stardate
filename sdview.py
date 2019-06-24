@@ -22,11 +22,10 @@ class View(object):
 
     def menu(convert, translate):
         """menu docstring"""
-        print("STARDATE.\n\n")
         View.show_today_stardate()
-        print('\n\n')
+        print('\n')
         while True:
-            responce = input("Do you want to do some other operation?\n\
+            responce = input("Do you want to do some other Stardate operation?\n\
 press:\n\
         1 : Compute Today\'s Stardate.\n\
         2 : To convert a Date into Stardate.\n\
@@ -42,16 +41,19 @@ press:\n\
                     elif responce.strip().lower() == 'q':
                         break
                     elif responce.strip().lower() == '1':
+                        View.clean()
                         View.show_today_stardate()
-                        print('\n\n')
+                        print('\n')
                     elif responce.strip().lower() == '2':
+                        View.clean()
                         date = View.ask_date()
-                        date[1]
-                        print(convert(date[0]))
-                        print('\n\n')
+                        stardate = Compute.sdconvert(date[0])
+                        View.show_stardate(stardate, date[1])
+                        print('\n')
                     elif responce.strip().lower() == '3':
-                        print(translate(View.ask_stardate()))
-                        print('\n\n')
+                        View.clean()
+                        print("\nEarthdate : ", translate(View.ask_stardate()))
+                        print('\n')
                     else:
                         raise
                 else:
@@ -64,6 +66,7 @@ press:\n\
         """
         Ask input and return for the date object.
         """
+        View.clean()
         dlist = []
         dlist.append(Compute.ask_integer("Earth Year? (YYYY format) ",
                                          range(-10000000, 10000000)))
@@ -76,6 +79,7 @@ press:\n\
         dlist.append(Compute.ask_integer("Minutes? (from 00 to 59) ",
                                          range(0, 60)))
 
+        View.clean()
         dstring = " ".join([str(i) for i in dlist])
 
         res_date = datetime.datetime.strptime(dstring, '%Y %m %d %H %M')
@@ -86,22 +90,31 @@ press:\n\
         """
         Ask and return for the float's stardate number.
         """
-        return float(input("What Stardate do you wish to convert? : "))
+        View.clean()
+        stardate = float(input("What Stardate do you wish to translate? : "))
+        View.clean()
+        return stardate
 
     def show_date(earthdate):
         """
         Displays a date object, in a User Experience readable format.
         """
+        View.clean()
         return earthdate()[1]
+
+    def show_stardate(stardate, date):
+        """
+        Displays Date's Stardate.
+        """
+        View.clean()
+        print("Earthdate : ", date)
+        print("\nStardate  : ", stardate)
 
     def show_today_stardate():
         """
         Displays Today's now()'s Stardate.
         """
-        print("Today is : ", View.show_date(Compute.nowearthdate))
-        print("Stardate : ", Compute.sdconvert(datetime.datetime.now().timetuple()))
-
-# TEST
-# print(View.ask_date()) # OK > time.struct_time(tm_year=2019, tm_mon=1, tm_mday=1, tm_hour=1, tm_min=1, tm_sec=0, tm_wday=1, tm_yday=1, tm_isdst=-1), 'Tuesday, 2019 January 01. 01:01:00')
-# print(View.ask_stardate()) # OK > What Stardate do you wish to convert? : 7974.96 > 7974.96
-# print(View.show_date(Compute.nowearthdate)) # OK > Monday, 2019 June 24. 16:06:50
+        View.clean()
+        print("Today\'s Earthdate : ", View.show_date(Compute.nowearthdate))
+        print("\nToday\'s Stardate  : ", Compute.sdconvert(
+              datetime.datetime.now().timetuple()))

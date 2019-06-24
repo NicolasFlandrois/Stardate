@@ -46,11 +46,11 @@ class Compute(object):
         """
         if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
             n = 366
-            print("The year is a Leap year.\n")
+            # print("The year is a Leap year.\n")
 
         else:
             n = 365
-            print("The year is a normal year.\n")
+            # print("The year is a normal year.\n")
 
         return n
 
@@ -80,6 +80,8 @@ class Compute(object):
         Compute.config()["stardate"] = Stardate Yaer reference point
         Compute.leapyr(t.tm_year) = number of days leap/normal year (365 or 366)
         """
+        print("Stardate  : ", sd)
+
         dlist = []
         ed_year = int(((sd - Compute.config()["stardate"])//1000) + Compute.config()["earthdate"])
         dlist.append(int(ed_year))
@@ -93,12 +95,4 @@ class Compute(object):
         #NOTE: This calculation has 2 min leap from real date
         dstring = " ".join([str(i) for i in dlist])
         
-        return datetime.datetime.strptime(dstring, '%Y %j %H %M')
-        
-
-# TEST
-# print(Compute.leapyr(2019)) # OK > The year is a normal year. > 365
-# print(Compute.sdconvert(datetime.datetime.now().timetuple())) # OK > 97079.72
-# print(Compute.sdtranslate(7974.96)) # OK > The year is a normal year. > 1930-05-17 10:08:00
-# print(Compute.config()) # OK > (2019, 96601.2)
-# print(Compute.nowearthdate()) # > (time.struct_time(tm_year=2019, tm_mon=6, tm_mday=24, tm_hour=15, tm_min=49, tm_sec=28, tm_wday=0, tm_yday=175, tm_isdst=-1), 'Monday, 2019 June 24. 15:49:28')
+        return datetime.datetime.strptime(dstring, '%Y %j %H %M').strftime('%A, %Y %B %d. %H:%M:%S')
