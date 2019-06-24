@@ -23,12 +23,14 @@ SOFTWARE.
 
 ######################################################################################################################################################
 
-Thu 10 Jan 2019 02:26:47 PM CET - Stardate 96627.51
+Mon 24 Jun 2019 17:41:36 CEST  - Stardate 97079.93
 Author: Nicolas Flandrois
 
 Script description:
 
-> stardate_sto.py - v1.2
+> STARDATE - V2.0
+
+- Stardate Now:
 	This script intend to compute Stardate, according to current time defined by the user computer. It is using customized reference points for calculation, according to STO Stardate generator.
 	For the moment, if the user wants to set up customized reference points, he/she needs to modify (b, c) variables directly in the script.
 	This script is using python 3. Launch the script in Python 3. It will print (display) 3 outputs in your consol:
@@ -36,7 +38,7 @@ Script description:
 		- Whether the current year is a Leap Year or a Normal Year.
 		- Current Stardate
 
-> stardate_convert.py - v1.0
+- Stardate Convertion
 	This script intend to convert an Earthdate into a Stardate. It is using customized reference points for calculation, according to STO Stardate generator.
 	For the moment, if the user wants to set up customized reference points, he/she needs to modify (b, c) variables directly in the script.
 	This script is using python 3. Launch the script in Python 3. 
@@ -51,7 +53,7 @@ Script description:
 		- Whether the current year is a Leap Year or a Normal Year.
 		- Corresponding Stardate.
 
-> stardate_translate.py - v1.0
+- Stardate Translation
 	This script intend to translate a Stardate into an Earthdate. It is using customized reference points for calculation, according to STO Stardate generator.
 	For the moment, if the user wants to set up customized reference points, he/she needs to modify (b, c) variables directly in the script.
 	This script is using python 3. Launch the script in Python 3. 
