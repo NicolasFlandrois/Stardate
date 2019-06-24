@@ -21,7 +21,7 @@ From launch, the program will automatically display the current Stardate (cf: St
 - Stardate Now:
     
     This script intend to compute Stardate, according to current time defined by the user computer. It is using customized reference points for calculation, according to STO Stardate generator.
-    For the moment, if the user wants to set up customized reference points, he/she needs to modify (b, c) variables directly in the script.
+    If the user wants to set up customized reference points, he/she needs to modify (b, c) variables in the sdconfig.json file. [^1]
 
     - Current date and time, Earthdate (defined by user computer).
     - Whether the current year is a Leap Year or a Normal Year.
@@ -30,38 +30,38 @@ From launch, the program will automatically display the current Stardate (cf: St
 - Stardate Convertion:
     
     This script intend to convert an Earthdate into a Stardate. It is using customized reference points for calculation, according to STO Stardate generator.
-    For the moment, if the user wants to set up customized reference points, he/she needs to modify (b, c) variables directly in the script.
+    If the user wants to set up customized reference points, he/she needs to modify (b, c) variables in the sdconfig.json file. [^1]
     
     It will ask the user for inputs, related to the date we want to translate:
     
-        - Year
-        - Month (Number of)
-        - Day of the month
-        - Hour
-        - Minutes
+    - Year
+    - Month (Number of)
+    - Day of the month
+    - Hour
+    - Minutes
     
     It will display on your consol:
     
-        - Earthdate (the date the user inputed, as a reminder).
-        - Whether the current year is a Leap Year or a Normal Year.
-        - Corresponding Stardate.
+    - Earthdate (the date the user inputed, as a reminder).
+    - Whether the current year is a Leap Year or a Normal Year.
+    - Corresponding Stardate.
 
 - Stardate Translation:
     
     This script intend to translate a Stardate into an Earthdate. It is using customized reference points for calculation, according to STO Stardate generator.
-    For the moment, if the user wants to set up customized reference points, he/she needs to modify (b, c) variables directly in the script.
+    If the user wants to set up customized reference points, he/she needs to modify (b, c) variables in the sdconfig.json file. [^1]
     
     > **Note**: Due to the nature of a Stardate and approximation (rounding at 2 decimals), the translation of the stardate has a leap error of 2 minutes.
     
     It will ask the user to inputs the stardate we want to translate:
 
-        - Stardate
+    - Stardate
 
     It will display in your consol:
 
-        - Stardate (the date the user inputed, as a reminder).
-        - Whether the current year is a Leap Year or a Normal Year.
-        - Corresponding Earthdate.
+    - Stardate (the date the user inputed, as a reminder).
+    - Whether the current year is a Leap Year or a Normal Year.
+    - Corresponding Earthdate.
 
 ---------------------------------------------------
 ### Requirements:
@@ -116,7 +116,7 @@ However, I will attract your attention to ***1967's instructions regarding Stard
 >
 > **[Star Trek Guide (April 17, 1967, p. 25)](https://en.wikipedia.org/wiki/Stardate)**:
 >
-> We invented "Stardate" to avoid continually mentioning Star Trek's century (actually, about two hundred years from now), and getting into arguments about whether this or that would have developed by then. Pick any combination of four numbers plus a percentage point, use it as your story's stardate. For example, 1313.5 is twelve o'clock noon of one day and 1314.5 would be noon of the next day. Each percentage point is roughly equivalent to one-tenth of one day. The progression of stardates in your script should remain constant but don't worry about whether or not there is a progression from other scripts. Stardates are a mathematical formula which varies depending on location in the galaxy, velocity of travel, and other factors, can vary widely from episode to episode.[^1]
+> We invented "Stardate" to avoid continually mentioning Star Trek's century (actually, about two hundred years from now), and getting into arguments about whether this or that would have developed by then. Pick any combination of four numbers plus a percentage point, use it as your story's stardate. For example, 1313.5 is twelve o'clock noon of one day and 1314.5 would be noon of the next day. Each percentage point is roughly equivalent to one-tenth of one day. The progression of stardates in your script should remain constant but don't worry about whether or not there is a progression from other scripts. Stardates are a mathematical formula which varies depending on location in the galaxy, velocity of travel, and other factors, can vary widely from episode to episode. [^2]
 > 
 
 So! Star Trek creators defined themselves that stardates vary according to MULTIPLE Factors:
@@ -160,37 +160,40 @@ In this repository, you will also find a .txt documents offering few reference p
 
 There is an exemple, to choose and use a stardate reference point.
 
->    Let say/consider, that you want to incarnate your alternet self in the STU.
->    What timeline do you want to be contemporary with?
->    Would you like to be in the same period of time as the UFP (United Federation of Planets) creation?
->    Or, would you prefer to be in the same timeline as your vavorit Star Trek character?
->    
->    Now that you chose your timeline, lets crossreference and reverse engineer a few reference points.
->    
->    In my exemple, I want to be born the same year as *Captain J.L. Picard*.
->    As *real life* birth year = 1970
->    JL PIcard's birthdate = July 13th 2305 (Earthdate) = Unknown Stardate.
->    We take as reference point: SD 2263.02 = 02 JAN 2305 [^2]
->    
->    So the Delta between our reference point and Picard's year of birth is 42 Earth Years = 42000 Stardate units.
->    Consequently, we can deduce [or reverse engineer], that Picard's Stardate of birth is 44791.77.
->    
->    Now back to the our *Alternate-STU-Ego*'s birth Year = 1970 [^3]
->    Simply use "1970" as Earth date reference point and "44263" as Stardate reference point.
->    **b = 1970**
->    **c = 44263**
->    
->    Now use/compute those reference points *{b:1970, c:44263}* [^4], launch the python script.
->    It will give you the current (*real time*) Stardate.
+: Let say/consider, that you want to incarnate your alternet self in the STU.
+: What timeline do you want to be contemporary with?
+: Would you like to be in the same period of time as the UFP (United Federation of Planets) creation?
+: Or, would you prefer to be in the same timeline as your vavorit Star Trek character?
 
+: Now that you chose your timeline, lets crossreference and reverse engineer a few reference points.
 
-> ***Note***: if not modified, the script will give a Stardate in STO reference point.[^4]
+: In my exemple, I want to be born the same year as *Captain J.L. Picard*.
+: As *real life* birth year = 1970
+: JL PIcard's birthdate = July 13th 2305 (Earthdate) = Unknown Stardate.
+: We take as reference point: SD 2263.02 = 02 JAN 2305 [^3]
+
+: So the Delta between our reference point and Picard's year of birth is 42 Earth Years = 42000 Stardate units.
+: Consequently, we can deduce [or reverse engineer], that Picard's Stardate of birth is 44791.77.
+
+: Now back to the our *Alternate-STU-Ego*'s birth Year = 1970 [^4]
+: Simply use "1970" as Earth date reference point and "44263" as Stardate reference point.
+: **b = 1970**
+: **c = 44263**
+
+: Now use/compute those reference points *{b:1970, c:44263}* [^1], launch the python script.
+: It will give you the current (*real time*) Stardate.
+
+> ***Note***: if not modified, the script will give a Stardate in STO reference point. [^1]
 
 If you prefer to calculate your Stardate every time by hand, that's cool too! You are free to have fun!
 
 # Qapla'
+
 ------------------------
-[^1]: source: [Wikipedia](https://en.wikipedia.org/wiki/Stardate)
-[^2]: As it's a major (also very tragic) reference point in all STU. Who dosn't like Vulcans, and would like to give them homage?
-[^3]: In my exemple I arbitrary use that date, you can use the year you prefer.. according to your liking or the meaning it has e.g. Wedding Anniversary, the first time you kissed a boy/girl, the first "on air" release date of Star Trek original series's first episode, or any event in Earth history!
-[^4]: To change the reference points, please modify the ***sdconfig.json*** file.
+[^1]: To change the reference points, please modify the ***sdconfig.json*** file.
+
+[^2]: source: [Wikipedia](https://en.wikipedia.org/wiki/Stardate)
+
+[^3]: As it's a major (also very tragic) reference point in all STU. Who dosn't like Vulcans, and would like to give them homage?
+
+[^4]: In my exemple I arbitrary use that date, you can use the year you prefer.. according to your liking or the meaning it has e.g. Wedding Anniversary, the first time you kissed a boy/girl, the first "on air" release date of Star Trek original series's first episode, or any event in Earth history!
