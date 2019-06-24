@@ -1,4 +1,3 @@
-######################################################################################################################################################
 MIT License
 
 Copyright (c) 2019 - Nicolas Flandrois
@@ -21,14 +20,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-######################################################################################################################################################
+---------------------------------------------------
 
-Mon 24 Jun 2019 17:41:36 CEST  - Stardate 97079.93
-Author: Nicolas Flandrois
+**Mon 24 Jun 2019 17:41:36 CEST**  - **Stardate** ***97079.93***
+**Author**: Nicolas Flandrois
 
-Script description:
+**Script description**:
 
-> STARDATE - V2.0
+## STARDATE - V2.0
 
 - Stardate Now:
 	This script intend to compute Stardate, according to current time defined by the user computer. It is using customized reference points for calculation, according to STO Stardate generator.
@@ -65,10 +64,10 @@ Script description:
 		- Whether the current year is a Leap Year or a Normal Year.
 		- Corresponding Earthdate.
 
-######################################################################################################################################################
->>> taH pagh taHbe <<<>>> To continue or to not continue <<<
+---------------------------------------------------
+# taH pagh taHbe <<<>>> To continue or to not continue <<<
 
->> Why? How? And a few thoughts to consider. <<
+## Why? How? And a few thoughts to consider. <<
 
 A stardate is a fictional system of time measurement developed for the television and film series Star Trek. In the series, use of this date system is commonly heard at the beginning of a voiceover log entry such as "Captain's log, stardate 41153.7. Our destination is planet Deneb IV..." While the general idea resembles the Julian day currently used by astronomers, writers and producers have selected numbers using different methods over the years, some more arbitrary than others. This makes it impossible to convert all stardates into equivalent calendar dates, especially since stardates were originally intended to disguise the precise era of Star Trek.
 
@@ -156,5 +155,5 @@ There is an exemple, to choose and use a stardate reference point.
 	Note: if not modified, the script will give a Stardate in STO reference point.
 	
 If you prefer to calculate your Stardate every time by hand, that's cool too! You are free to have fun!
-	
->>>>> Qapla' <<<<<
+
+# Qapla'
