@@ -69,7 +69,7 @@ It will display in your consol:
 + No other requirements, all modules are part of Python's standard Library.
 
 ---------------------------------------------------
-# taH pagh taHbe <<<>>> To continue or to not continue <<<
+# taH pagh taHbe <<< To continue or to not continue >>>
 
 ## Why? How? And a few thoughts to consider.
 
@@ -98,7 +98,7 @@ Today, the following algorythm is admited in Star Trek fan univers, to convert a
 > 
 > d = Earth Day to convert
 
->***Nota Benne***: (m+d) = ISO-8601 day of the year's number. e.g. June 10th, 2018 = Year 2018, Day 161
+>   ***Nota Benne***: (m+d) = ISO-8601 day of the year's number. e.g. June 10th, 2018 = Year 2018, Day 161
 
 The most important piece of information: **1 Earth Year = 1000 Stardate units**.
 
