@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-#Date: Mon 24 Jun 2019 17:36:07 CEST
-#Author: Nicolas Flandrois
-#Description:View's class will regroup all displays and questions inputs, needed in Stardate.
+# Date: Mon 24 Jun 2019 17:36:07 CEST
+# Author: Nicolas Flandrois
+# Description:View's class will regroup all displays and questions inputs,
+# needed in Stardate.
 
 import datetime
-import os, platform
+import os
+import platform
 from sdcompute import Compute
+
 
 class View(object):
     """
@@ -14,7 +17,7 @@ class View(object):
 
     def clean():
         """
-        This function will clear the terminal's screen. The command is 
+        This function will clear the terminal's screen. The command is
         automaticaly detected according to the system OS you run it.
         Compatible with Windows, OSx, and Linux.
         """
@@ -22,6 +25,8 @@ class View(object):
 
     def menu(convert, translate):
         """menu docstring"""
+        View.clean()
+        print("STARDATE\n")
         View.show_today_stardate()
         print('\n')
         while True:
@@ -57,16 +62,14 @@ press:\n\
                     else:
                         raise
                 else:
-                    raise          
+                    raise
             except:
                 print("We couldn't understand your choice. Please try again.")
 
-            
     def ask_date():
         """
         Ask input and return for the date object.
         """
-        View.clean()
         dlist = []
         dlist.append(Compute.ask_integer("Earth Year? (YYYY format) ",
                                          range(-10000000, 10000000)))
@@ -84,13 +87,13 @@ press:\n\
 
         res_date = datetime.datetime.strptime(dstring, '%Y %m %d %H %M')
 
-        return  res_date.timetuple(), res_date.strftime('%A, %Y %B %d. %H:%M:%S')
+        return res_date.timetuple(), res_date.strftime(
+            '%A, %Y %B %d. %H:%M:%S')
 
     def ask_stardate():
         """
         Ask and return for the float's stardate number.
         """
-        View.clean()
         stardate = float(input("What Stardate do you wish to translate? : "))
         View.clean()
         return stardate
@@ -99,14 +102,12 @@ press:\n\
         """
         Displays a date object, in a User Experience readable format.
         """
-        View.clean()
         return earthdate()[1]
 
     def show_stardate(stardate, date):
         """
         Displays Date's Stardate.
         """
-        View.clean()
         print("Earthdate : ", date)
         print("\nStardate  : ", stardate)
 
@@ -114,7 +115,6 @@ press:\n\
         """
         Displays Today's now()'s Stardate.
         """
-        View.clean()
         print("Today\'s Earthdate : ", View.show_date(Compute.nowearthdate))
         print("\nToday\'s Stardate  : ", Compute.sdconvert(
               datetime.datetime.now().timetuple()))
