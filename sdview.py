@@ -23,7 +23,7 @@ class View(object):
         """
         os.system("cls" if platform.system() == "Windows" else "clear")
 
-    def menu(convert, translate):
+    def menu(self, translate):
         """menu docstring"""
         View.clean()
         print("STARDATE\n")
@@ -40,27 +40,26 @@ press:\n\
             View.clean()
 
             try:
-                if responce.strip().lower() in ['r', 'q', '1', '2', '3']:
-                    if responce.strip().lower() == 'r':
-                        continue
-                    elif responce.strip().lower() == 'q':
-                        break
-                    elif responce.strip().lower() == '1':
-                        View.clean()
-                        View.show_today_stardate()
-                        print('\n')
-                    elif responce.strip().lower() == '2':
-                        View.clean()
-                        date = View.ask_date()
-                        stardate = Compute.sdconvert(date[0])
-                        View.show_stardate(stardate, date[1])
-                        print('\n')
-                    elif responce.strip().lower() == '3':
-                        View.clean()
-                        print("\nEarthdate : ", translate(View.ask_stardate()))
-                        print('\n')
-                    else:
-                        raise
+                if responce.strip().lower() not in ['r', 'q', '1', '2', '3']:
+                    raise
+                if responce.strip().lower() == 'r':
+                    continue
+                elif responce.strip().lower() == 'q':
+                    break
+                elif responce.strip().lower() == '1':
+                    View.clean()
+                    View.show_today_stardate()
+                    print('\n')
+                elif responce.strip().lower() == '2':
+                    View.clean()
+                    date = View.ask_date()
+                    stardate = Compute.sdconvert(date[0])
+                    View.show_stardate(stardate, date[1])
+                    print('\n')
+                elif responce.strip().lower() == '3':
+                    View.clean()
+                    print("\nEarthdate : ", translate(View.ask_stardate()))
+                    print('\n')
                 else:
                     raise
             except:
@@ -70,9 +69,11 @@ press:\n\
         """
         Ask input and return for the date object.
         """
-        dlist = []
-        dlist.append(Compute.ask_integer("Earth Year? (YYYY format) ",
-                                         range(-10000000, 10000000)))
+        dlist = [
+            Compute.ask_integer(
+                "Earth Year? (YYYY format) ", range(-10000000, 10000000)
+            )
+        ]
         dlist.append(Compute.ask_integer("Earth Month? (from 01 to 12) ",
                                          range(1, 13)))
         dlist.append(Compute.ask_integer("Day of the month? (from 01 to 31) ",
@@ -98,18 +99,18 @@ press:\n\
         View.clean()
         return stardate
 
-    def show_date(earthdate):
+    def show_date(self):
         """
         Displays a date object, in a User Experience readable format.
         """
-        return earthdate()[1]
+        return self()[1]
 
-    def show_stardate(stardate, date):
+    def show_stardate(self, date):
         """
         Displays Date's Stardate.
         """
         print("Earthdate : ", date)
-        print("\nStardate  : ", stardate)
+        print("\nStardate  : ", self)
 
     def show_today_stardate():
         """

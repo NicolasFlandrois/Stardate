@@ -21,47 +21,37 @@ class Compute(object):
         with open("sdconfig.json") as f:
             return json.load(f)
 
-    def ask_integer(message: str, range, error_message: str = ""):
+    def ask_integer(self, range, error_message: str = ""):
         """
         This function's purpose is to ask and verify an Integer.
         """
         var = None
         while True:
             try:
-                var = int(input(message))
+                var = int(input(self))
                 if var in range:
                     return var
-                    raise
-
             except KeyboardInterrupt:
                 break
 
             except:
                 print(error_message)
 
-    def leapyr(year: int):
+    def leapyr(self):
         """"
         This function defines if the year is
         a Leap year (366 days)
         or a Normal year (365 days).
         Then it will to the variable n the value of 366 or 365, accordingly.
         """
-        if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
-            n = 366
-            # print("The year is a Leap year.\n")
-
-        else:
-            n = 365
-            # print("The year is a normal year.\n")
-
-        return n
+        return 366 if self % 400 == 0 or self % 4 == 0 and self % 100 != 0 else 365
 
     def nowearthdate():
         """Will generate automaticaly a tuple datetime object, for now time"""
         nowdate = datetime.datetime.now()
         return nowdate.timetuple(), nowdate.strftime('%A, %Y %B %d. %H:%M:%S')
 
-    def sdconvert(t):
+    def sdconvert(self):
         """
         Stardate calculator
         t = Time  (cf 'datetime.datetime.now().timetuple()' format)
@@ -69,13 +59,25 @@ class Compute(object):
         Compute.config()["stardate"] = Stardate Yaer reference point
         Compute.leapyr(t.tm_year) = number of days leap year/not (365 or 366)
         """
-        return format(((Compute.config()["stardate"] +
-                        (1000*(t.tm_year - Compute.config()["earthdate"]))) +
-                      ((1000/((Compute.leapyr(t.tm_year))*1440.0))*(((
-                            t.tm_yday - 1.0)*1440.0) +
-                        (t.tm_hour*60.0) + t.tm_min))), '.2f')
+        return format(
+            (
+                Compute.config()["stardate"]
+                + 1000 * (self.tm_year - Compute.config()["earthdate"])
+            )
+            + (
+                1000
+                / (Compute.leapyr(self.tm_year) * 1440.0)
+                * (
+                    (
+                        (((self.tm_yday - 1.0) * 1440.0) + self.tm_hour * 60.0)
+                        + self.tm_min
+                    )
+                )
+            ),
+            '.2f',
+        )
 
-    def sdtranslate(sd):
+    def sdtranslate(self):
         """
         Stardate translator
         sd = Stardate Time  (cf float, stardate format)
@@ -83,16 +85,19 @@ class Compute(object):
         Compute.config()["stardate"] = Stardate Yaer reference point
         Compute.leapyr(t.tm_year) = number of days leap year/not (365 or 366)
         """
-        print("Stardate  : ", sd)
+        print("Stardate  : ", self)
 
-        dlist = []
-        ed_year = int(((sd - Compute.config()["stardate"]) // 1000) +
-                      Compute.config()["earthdate"])
-        dlist.append(int(ed_year))
-        ed_time = (((sd - Compute.config()["stardate"]) % 1000) /
-                   (1000 / (1440*Compute.leapyr(ed_year))))
+        ed_year = int(
+            (self - Compute.config()["stardate"]) // 1000
+            + Compute.config()["earthdate"]
+        )
+        ed_time = (
+            (self - Compute.config()["stardate"])
+            % 1000
+            / (1000 / (1440 * Compute.leapyr(ed_year)))
+        )
         ed_day = (ed_time//1440)+1
-        dlist.append(int(ed_day))
+        dlist = [ed_year, int(ed_day)]
         ed_hour = (ed_time-((ed_day-1)*1440))//60
         dlist.append(int(ed_hour))
         ed_min = ed_time % 60
